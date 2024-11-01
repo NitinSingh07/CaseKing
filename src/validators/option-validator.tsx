@@ -1,20 +1,21 @@
-// bg-rose-900 border-rose-900
-// bg-yellow-600 border-yellow-600
+// bg-blue-950 border-blue-950
+// bg-zinc-900 border-zinc-900
+// bg-rose-950 border-rose-950
 
 import { PRODUCT_PRICES } from "@/config/products";
 
-// bg-blue-950 border-blue-950
 export const COLORS = [
   { label: "Black", value: "black", tw: "zinc-900" },
-  { label: "Blue", value: "blue", tw: "blue-950" },
-  { label: "Rose", value: "rose", tw: "rose-900" },
-  { label: "White", value: "white", tw: "white-950" },
-  { label: "Yellow", value: "red", tw: "yellow-600" },
+  {
+    label: "Blue",
+    value: "blue",
+    tw: "blue-950",
+  },
+  { label: "Rose", value: "rose", tw: "rose-950" },
 ] as const;
 
 export const MODELS = {
   name: "models",
-
   options: [
     {
       label: "iPhone X",
@@ -39,10 +40,6 @@ export const MODELS = {
     {
       label: "iPhone 15",
       value: "iphone15",
-    },
-    {
-      label: "iPhone 16",
-      value: "iphone16",
     },
   ],
 } as const;
