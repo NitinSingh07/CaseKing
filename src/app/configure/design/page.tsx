@@ -9,8 +9,8 @@ interface PageProps {
 }
 
 const Page = async ({ searchParams }: PageProps) => {
-  const { id } = searchParams;
-
+  const params = await searchParams;
+  const { id } = params;
   if (!id || typeof id !== "string") {
     return notFound();
   }
