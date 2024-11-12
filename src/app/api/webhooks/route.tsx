@@ -77,7 +77,7 @@ export async function POST(req: Request) {
         react: OrderReceivedEmail({
           orderId,
           orderDate: updatedOrder.createdAt.toDateString(),
-          // @ts-ignore
+          // @ts-expect-error This line throws an error due to type mismatch in third-party library
           shippingAddress: {
             name: session.customer_details!.name!,
             city: shippingAddress!.city!,
