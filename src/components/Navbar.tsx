@@ -3,8 +3,10 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { cookies } from "next/headers";
 
 const Navbar = async () => {
+  await cookies();
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   const isAdmin = user?.email === process.env.ADMIN_EMAIL;
